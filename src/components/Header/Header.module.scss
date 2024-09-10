@@ -1,22 +1,31 @@
 .header {
-  @apply fixed w-full h-20 border-b 
-  bg-neutral-0 border-neutral-100;
+  @apply fixed w-full h-20 border-b bg-neutral-0 border-neutral-100;
 
-  .wrapperCenter {
-    @apply h-full flex flex-row gap-0 p-6
-    justify-between items-center;
+  > .wrapperCenter {
+    @apply flex flex-row justify-between items-center gap-0 h-full mx-12 py-6;
 
     .logo {
-      @apply flex h-16 bg-neutral-200;
+      @apply flex h-16;
     }
 
-    nav {
-      @apply h-full flex flex-row items-center;
-      ul {
-        @apply h-full flex flex-row mr-4 items-center;
+    .button {
+      @apply w-40 h-8 rounded text-neutral-0 font-medium bg-neutral-900
+      hover:bg-neutral-700 hover:duration-200;
+    }
 
-        li {
-          @apply ml-4;
+    .navBar {
+      @apply flex flex-row items-center h-full;
+
+      > .navList {
+        @apply flex flex-row items-center h-full;
+
+        .navItem {
+          @apply ml-2;
+
+          a {
+            @apply flex items-center justify-center  rounded px-4 h-8
+            hover:bg-neutral-100 hover:duration-200;
+          }
         }
       }
     }
