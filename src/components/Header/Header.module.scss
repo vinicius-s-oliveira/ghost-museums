@@ -1,11 +1,28 @@
 .header {
-  @apply fixed w-full h-20 border-b bg-neutral-0 border-neutral-100;
+  @apply fixed w-full h-20 border-b bg-neutral-0 border-neutral-200;
 
   > .wrapperCenter {
     @apply flex flex-row justify-between items-center gap-0 h-full mx-12 py-6;
 
-    .logo {
-      @apply flex h-16;
+    .searchWrapper {
+      @apply flex flex-row justify-between w-1/4;
+
+      .logo {
+        @apply flex h-14;
+      }
+
+      .search {
+        @apply flex items-center w-4/5;
+
+        input {
+          @apply h-10 w-full px-4 border border-neutral-200  rounded-3xl
+          text-sm placeholder:text-neutral-700 outline-none;
+        }
+
+        img {
+          @apply relative right-10;
+        }
+      }
     }
 
     .button {
@@ -14,17 +31,31 @@
     }
 
     .navBar {
-      @apply flex flex-row items-center h-full;
+      @apply flex flex-row justify-between items-center h-10;
 
       > .navList {
-        @apply flex flex-row items-center h-full;
+        @apply flex flex-row items-center justify-between w-full h-full;
 
         .navItem {
-          @apply ml-2;
+          @apply text-neutral-900 pr-8;
 
           a {
             @apply flex items-center justify-center  rounded px-4 h-8
             hover:bg-neutral-100 hover:duration-200;
+          }
+        }
+
+        .loginButton {
+          @apply flex items-center justify-end h-full pl-8
+          border-l border-l-neutral-200 font-semibold text-neutral-900;
+
+          a {
+            @apply flex items-center justify-center  h-full 
+            rounded px-4 hover:bg-neutral-800 hover:text-neutral-0 hover:duration-100;
+          }
+
+          span {
+            @apply border-b leading-4;
           }
         }
       }
