@@ -1,0 +1,8 @@
+.navItem {
+  @apply text-neutral-900 pr-8;
+
+  a {
+    @apply flex items-center justify-center  rounded px-4 h-8
+    hover:bg-neutral-100 hover:duration-200;
+  }
+}

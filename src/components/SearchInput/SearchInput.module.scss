@@ -1,0 +1,12 @@
+.searchInput {
+  @apply flex items-center justify-center w-4/5;
+
+  input {
+    @apply h-10 w-full px-4 border border-neutral-200 rounded-3xl
+    text-sm placeholder:text-neutral-700 outline-none;
+  }
+
+  img {
+    @apply relative right-10;
+  }
+}

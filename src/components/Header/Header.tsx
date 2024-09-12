@@ -1,3 +1,7 @@
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
+import NavItem from "../NavItem/NavItem";
+import SearchInput from "../SearchInput/SearchInput";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -5,35 +9,19 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.wrapperCenter}>
         <div className={styles.searchWrapper}>
-          <a href="/">
-            <img
-              className={styles.logo}
-              src="./src/assets/museum-icon.png"
-              alt="logo-icon"
-            />
+          <a className={styles.logoWrapper} href="/">
+            <Logo icon="./src/assets/museum-icon.png" />
           </a>
-
-          <div className={styles.search}>
-            <input placeholder="Pesquisar exposições" />
-            <img src="./src/assets/search.svg" />
-          </div>
+          <SearchInput placeholder="Pesquisar exposições" />
         </div>
 
         <nav className={styles.navBar}>
           <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <a href="#">Como funciona</a>
-            </li>
-
-            <li className={styles.navItem}>
-              <a href="#">Eventos</a>
-            </li>
-
-            <li className={styles.loginButton}>
-              <a href="#">
-                <span>Entre ou Cadastre-se</span>
-              </a>
-            </li>
+            <NavItem title="Como funciona" />
+            <NavItem title="Eventos" />
+            <div className={styles.loginButton}>
+              <Button title="Entre ou cadastre-se" onClick={() => {}} />
+            </div>
           </ul>
         </nav>
       </div>
