@@ -1,5 +1,4 @@
 import Button from "../Button/Button";
-import Logo from "../Logo/Logo";
 import NavItem from "../NavItem/NavItem";
 import SearchInput from "../SearchInput/SearchInput";
 import styles from "./Header.module.scss";
@@ -10,7 +9,10 @@ export default function Header() {
       <div className={styles.wrapperCenter}>
         <div className={styles.searchWrapper}>
           <a className={styles.logoWrapper} href="/">
-            <Logo icon="./src/assets/museum-icon.png" />
+            {/* @TO-DO: Componentize Museum Icon */}
+            <span className="material-symbols-outlined text-4xl text-neutral-900">
+              museum
+            </span>
           </a>
           <SearchInput placeholder="Pesquisar exposições" />
         </div>
@@ -19,7 +21,7 @@ export default function Header() {
           <ul className={styles.navList}>
             <NavItem title="Como funciona" />
             <NavItem title="Eventos" />
-            <div className={styles.loginButton}>
+            <div className={styles.loginWrapper}>
               <Button title="Entre ou cadastre-se" onClick={() => {}} />
             </div>
           </ul>

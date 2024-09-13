@@ -2,19 +2,14 @@
   @apply fixed w-full h-20 border-b bg-neutral-0 border-neutral-200;
 
   > .wrapperCenter {
-    @apply flex flex-row justify-between items-center gap-0 h-full mx-12 py-6;
+    @apply flex flex-row justify-between items-center gap-0 h-full mx-8 py-6;
 
     .searchWrapper {
-      @apply flex flex-row justify-between w-1/4;
+      @apply flex flex-row justify-around w-1/4;
 
       .logoWrapper {
-        @apply flex w-1/6 h-14;
+        @apply flex items-center justify-center w-10 h-14;
       }
-    }
-
-    .button {
-      @apply w-40 h-8 rounded text-neutral-0 font-medium bg-neutral-900
-      hover:bg-neutral-700 hover:duration-200;
     }
 
     .navBar {
@@ -23,7 +18,7 @@
       > .navList {
         @apply flex flex-row items-center justify-between w-full h-full;
 
-        .loginButton {
+        .loginWrapper {
           @apply flex items-center justify-end h-full pl-8
           border-l border-l-neutral-200 font-semibold text-neutral-900;
         }
