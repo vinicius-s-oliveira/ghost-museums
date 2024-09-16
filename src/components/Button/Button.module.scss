@@ -3,20 +3,21 @@
 
   > .buttonBorderless {
     @apply flex items-center justify-center h-full 
-    rounded px-4 hover:bg-neutral-800 hover:duration-100;
+    rounded px-4 hover:bg-neutral-800 hover:duration-100
+    text-neutral-900 hover:text-neutral-0;
 
     span {
-      @apply border-b leading-4 font-semibold 
-      text-neutral-900 hover:text-neutral-0;
+      @apply border-b leading-4 font-semibold;
     }
   }
 
   > .buttonOutlined {
     @apply flex items-center justify-center h-full border
-    rounded px-4 hover:bg-neutral-800 hover:duration-100;
+    rounded px-4 hover:bg-neutral-800 hover:duration-100
+    text-neutral-900 hover:text-neutral-0;
 
     span {
-      @apply font-semibold text-neutral-900 hover:text-neutral-0;
+      @apply font-semibold;
     }
   }
 
