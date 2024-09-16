@@ -1,4 +1,139 @@
 .footer {
-  @apply w-full h-72 
-  bg-neutral-900;
+  @apply w-full flex flex-col bg-neutral-900;
+
+  > .infoSection {
+    @apply flex flex-row border-b border-b-neutral-600;
+
+    .info {
+      @apply flex flex-row w-2/3 py-12 px-8 
+      text-neutral-0 border-r border-r-neutral-600;
+
+      .infoColumn {
+        @apply w-1/4;
+      }
+
+      .infoTitle {
+        @apply text-2xl pb-12;
+      }
+
+      .linkGroup {
+        @apply flex flex-col h-80 gap-4;
+      }
+
+      .linkGroupAlternative {
+        @apply flex flex-col h-72 gap-4;
+      }
+
+      .linkButton {
+        @apply text-sm;
+      }
+
+      .linkFooter {
+        @apply text-sm pb-16;
+      }
+    }
+
+    .newsletter {
+      @apply w-1/3 py-12 px-8 flex flex-col text-neutral-0 font-light;
+
+      .formHeader {
+        @apply flex flex-col gap-2;
+
+        .title {
+          @apply text-2xl font-normal;
+        }
+
+        .subtitle {
+          @apply w-3/4;
+        }
+      }
+
+      .form {
+        @apply flex flex-col gap-8 mt-8;
+
+        > .fields {
+          @apply flex flex-col gap-2;
+
+          label {
+            @apply text-sm;
+          }
+
+          input {
+            @apply border px-4 border-neutral-500 h-12 w-full text-sm 
+            placeholder:text-neutral-300 outline-none bg-neutral-900;
+          }
+        }
+
+        > .checkbox {
+          @apply flex flex-row  gap-3;
+
+          input {
+            @apply w-6 accent-neutral-800;
+          }
+
+          span {
+            @apply text-xs text-neutral-300 w-2/3 font-normal;
+          }
+        }
+
+        > .button {
+          @apply flex flex-row gap-3 items-center justify-start;
+
+          span {
+            @apply text-lg font-bold;
+          }
+
+          img {
+            @apply bg-neutral-0 p-1 rounded-full h-8;
+          }
+        }
+      }
+    }
+  }
+
+  > .socialSection {
+    @apply border-b border-b-neutral-600;
+
+    .social {
+      @apply py-12 px-8 h-full flex flex-col gap-6;
+
+      > .firstRow {
+        @apply flex flex-row gap-8;
+
+        .logo {
+          @apply flex items-center justify-center;
+        }
+
+        .content {
+          @apply flex flex-col gap-2 items-start justify-center text-neutral-0;
+        }
+
+        .address {
+          @apply text-base font-light;
+        }
+
+        .policies {
+          @apply text-sm font-normal;
+        }
+      }
+
+      > .secondRow {
+        @apply flex flex-row justify-between;
+
+        .socialIcons {
+          @apply flex flex-row gap-8;
+        }
+      }
+    }
+  }
+
+  > .termsSection {
+    .terms {
+      @apply py-8 px-8;
+
+      span {
+        @apply text-neutral-0 font-light;
+      }
+    }
+  }
 }
